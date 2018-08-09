@@ -18,7 +18,7 @@ function logMember(target, name, descriptor) {
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    title = 'Pluto';
+    title = 'Pluto Solutions';
 
     constructor() {
         console.log("Start app with a Simple Method " + this.aSimpleMethod(5, 6));
