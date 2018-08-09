@@ -1,10 +1,30 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+function logMember(target, name, descriptor) {
+    const original = descriptor.value;
+    descriptor.value = function (...args) {
+        console.log("Arguments", args, " were passed in this function");
+        const result = original.apply(this, args);
+        console.log("The result of the function is ", result)
+        return result;
+    };
+
+    return descriptor;
+}
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pluto';
+    title = 'pluto';
+
+    constructor() {
+    }
+
+    @logMember
+    aSimpleMethod(a, b) {
+        return a * b;
+    }
 }
