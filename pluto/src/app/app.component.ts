@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {User} from './address-card/user.model';
 
 function logMember(target, name, descriptor) {
     const original = descriptor.value;
@@ -18,10 +19,21 @@ function logMember(target, name, descriptor) {
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    title = 'Pluto Solutions';
+    title: string = 'Pluto Solutions Angular 6';
+    user: User;
+    name: string = "Initial value";
 
     constructor() {
         console.log("Start app with a Simple Method " + this.aSimpleMethod(5, 6));
+
+        this.user = new User();
+        this.user.name = "Company 1";
+        this.user.title = "Software Engineer";
+        this.user.address = "Amphur Sansai, Chiang Mai, Thailand 50210";
+        this.user.phones = [
+            '+66 81 343 3982',
+            '+66 81 677 9999'
+        ];
     }
 
     @logMember
