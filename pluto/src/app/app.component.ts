@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {User} from './address-card/user.model';
+import {WebService} from "./web.service";
 
 function logMember(target, name, descriptor) {
     const original = descriptor.value;
@@ -24,20 +25,15 @@ export class AppComponent {
     name: string = "Initial value";
 
     constructor() {
-        console.log("Start app with a Simple Method " + this.aSimpleMethod(5, 6));
+        console.log("Start app with a Simple Method " + this.multiply(5, 6));
 
-        this.user = new User();
-        this.user.name = "Company 1";
-        this.user.title = "Software Engineer";
-        this.user.address = "Amphur Sansai, Chiang Mai, Thailand 50210";
-        this.user.phones = [
-            '+66 81 343 3982',
-            '+66 81 677 9999'
-        ];
+        let webService = new WebService();
+        webService.writeToConsole("Hello, from web service");
+        this.user = webService.getTestUser();
     }
 
     @logMember
-    aSimpleMethod(a, b) {
+    multiply(a, b) {
         return a * b;
     }
 }

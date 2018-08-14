@@ -6,6 +6,7 @@ import {DateComponent} from './date/date.component';
 import {AddressCardComponent} from './address-card/address-card.component';
 import {FormsModule} from "@angular/forms";
 import {ViewModule} from "./view/view.module";
+import {WebService} from "./web.service";
 
 @NgModule({
     declarations: [
@@ -19,7 +20,9 @@ import {ViewModule} from "./view/view.module";
         FormsModule,
         ViewModule
     ],
-    providers: [],
+    providers: [
+        WebService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
