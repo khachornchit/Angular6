@@ -24,12 +24,8 @@ export class AppComponent {
     user: User;
     name: string = "Initial value";
 
-    constructor() {
-        console.log("Start app with a Simple Method " + this.multiply(5, 6));
-
-        let webService = new WebService();
-        webService.writeToConsole("Hello, from web service");
-        this.user = webService.getTestUser();
+    constructor(private service: WebService) {
+        this.user = this.service.getTestUser();
     }
 
     @logMember
