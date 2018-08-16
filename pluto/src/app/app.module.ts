@@ -8,16 +8,24 @@ import {FormsModule} from "@angular/forms";
 import {ViewModule} from "./view/view.module";
 import {WebService} from "./web.service";
 import {HttpClientModule} from "@angular/common/http";
+import {AppRoutingModule} from "./app-routing.module";
+import { HomeComponent } from './home/home.component';
+import { SettingComponent } from './setting/setting.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         GreetingComponent,
         DateComponent,
-        AddressCardComponent
+        AddressCardComponent,
+        HomeComponent,
+        SettingComponent,
+        PageNotFoundComponent
     ],
     imports: [
         BrowserModule,
+        AppRoutingModule,
         FormsModule,
         HttpClientModule,
         ViewModule
