@@ -1,0 +1,53 @@
+.address-card {
+    border: 1px gray solid;
+    padding: 15px;
+}
+
+.name {
+    font-family: Verdana, sans-serif;
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0.2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.title {
+    font-style: italic;
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0.2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.address {
+    font-size: 15px;
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0.2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.phone {
+    border-left: 1px gray solid;
+    padding-left: 5px;
+
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0.2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.phone p, ul {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}

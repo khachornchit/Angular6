@@ -12,6 +12,8 @@ import {AppRoutingModule} from "./app-routing.module";
 import { HomeComponent } from './home/home.component';
 import { SettingComponent } from './setting/setting.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SettingProfileComponent } from './setting-profile/setting-profile.component';
+import { SettingContactComponent } from './setting-contact/setting-contact.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +23,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
         AddressCardComponent,
         HomeComponent,
         SettingComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        SettingProfileComponent,
+        SettingContactComponent
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,13 @@
+<div>
+    <h1>Http Connection</h1>
+    User name : <input type="text" [(ngModel)]="userName">
+    <button (click)="search()">Search</button>
+    <div *ngIf="response">
+        <ul>
+            <li>Login name : {{response.login}}</li>
+            <li>Number of repos : {{response.public_repos}}</li>
+            <li>Number of gists : {{response.public_gists}}</li>
+            <li>Number of followers : {{response.followers}}</li>
+        </ul>
+    </div>
+</div>
